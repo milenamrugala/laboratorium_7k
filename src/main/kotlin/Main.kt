@@ -1,5 +1,6 @@
 fun main() {
-    val group = Group()
+    println("Zadanie 1")
+    val group = Group<Student>()
 
     val firstStudent = Student("Milena", "Mrugała", "51251", Grades.DB)
     val secondStudent = Student("Monika", "Mrugała", "31431", Grades.DB_PLUS)
@@ -26,4 +27,30 @@ fun main() {
     } catch (e: NoSuchElementException) {
         println("Exception - ${e.message}")
     }
+
+    println()
+    println("Zadanie 2")
+    val myList = listOf("Opel", "Toyota", "Honda", "Volvo", "Volkswagen")
+    group.display(myList)
+
+    println()
+    println("Zadanie 3")
+    val students = listOf(
+        Student("Milena", "Mrugała", "51251", Grades.DB),
+        Student("Monika", "Mrugała", "31431", Grades.BDB)
+    )
+
+    val grades = listOf(
+        Grades.DB_PLUS,
+        Grades.DST,
+        Grades.NB
+    )
+
+    println("Students:")
+    group.display(students)
+
+    println()
+
+    println("Grades:")
+   group.display(grades)
 }
